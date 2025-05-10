@@ -1,0 +1,575 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.btn-nav {
+  text-decoration: none;
+  font-size: 30px;
+  margin-left: 500px;
+  padding-top: 20px;
+  color: #000;
+  position: fixed;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* chap */
+
+.popup-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.popup-circle {
+  width: 100%;
+  height: 100%;
+  background-color: #c2aedc;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #4ecdc4;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  z-index: 10;
+}
+
+.printable-sheet {
+  width: 150px;
+  height: 180px;
+  background-color: white;
+  position: absolute;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sheet-1 {
+  top: 80px;
+  left: 60px;
+  transform: rotate(-5deg);
+  z-index: 2;
+}
+
+.sheet-2 {
+  top: 70px;
+  left: 170px;
+  transform: rotate(5deg);
+  z-index: 3;
+}
+
+.icons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  padding: 15px;
+}
+
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.character {
+  width: 120px;
+  height: 150px;
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+
+.pencil {
+  position: absolute;
+  top: 120px;
+  right: 50px;
+  width: 80px;
+  height: 20px;
+  background-color: #a4d867;
+  border-radius: 2px;
+  transform: rotate(-45deg);
+  z-index: 4;
+}
+
+.pencil:after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-left: 15px solid #a4d867;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+.signup-text {
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+}
+
+.signup-form {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 60px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.email-input {
+  width: 60%;
+  height: 80%;
+  border: none;
+  padding-left: 20px;
+  font-size: 16px;
+  color: #999;
+  outline: none;
+}
+
+.signup-button {
+  width: 35%;
+  height: 80%;
+  background-color: #ff8642;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cute-character {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.cute-face {
+  position: relative;
+  width: 80px;
+  height: 60px;
+}
+
+.ear {
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  border: 2px solid #333;
+  border-radius: 50%;
+}
+
+.ear-left {
+  top: -15px;
+  left: 10px;
+  transform: rotate(-20deg);
+}
+
+.ear-right {
+  top: -15px;
+  right: 10px;
+  transform: rotate(20deg);
+}
+
+.face {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  position: relative;
+  margin: auto;
+}
+
+.eye {
+  position: absolute;
+  width: 8px;
+  height: 12px;
+  background-color: #333;
+  border-radius: 50%;
+  top: 20px;
+}
+
+.eye-left {
+  left: 15px;
+}
+
+.eye-right {
+  right: 15px;
+}
+
+.smile {
+  position: absolute;
+  width: 30px;
+  height: 15px;
+  border-bottom: 2px solid #333;
+  border-radius: 50%;
+  bottom: 15px;
+  left: 15px;
+}
+
+.ice-cream {
+  position: absolute;
+  top: -30px;
+  right: -20px;
+}
+
+.cone {
+  width: 30px;
+  height: 40px;
+  background-color: white;
+  border: 2px solid #333;
+  border-radius: 5px 5px 15px 15px;
+}
+
+.scoop {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  position: relative;
+  top: -25px;
+  left: -5px;
+}
+
+.logo {
+  position: absolute;
+  bottom: 10px;
+  left: -50px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-circle {
+  width: 30px;
+  height: 30px;
+  background-color: #f8aa3c;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.logo-text {
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.signup-container {
+  width: 100%;
+  max-width: 480px;
+  height: 70px;
+  position: relative;
+  margin-top: -40px;
+}
+
+.signup-form {
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #65cbb5;
+}
+
+.email-input {
+  width: 60%;
+  height: 90%;
+  border: none;
+  padding-left: 20px;
+  font-size: 16px;
+  color: #555;
+  outline: none;
+}
+
+.email-input::placeholder {
+  color: #999;
+}
+
+.signup-button {
+  width: 35%;
+  height: 80%;
+  background-color: #ff8642;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.signup-button:hover {
+  background-color: #e87836;
+}
+
+.popup-container {
+  display: none;
+  position: fixed;
+  right: 0;
+  bottom: 100px;
+  z-index: 9999;
+}
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  /* rasm link chegarasidan chiqmasin */
+  background-color: #FFB81C;
+  /* default rang, pastda nth-child bilan almashtiring */
+  transition: color 0.3s ease;
+}
+
+/* Rangli fonlar (hammasini ham belgilab qo‘ying) */
+.nav-link:nth-of-type(1) {
+  background-color: #FFB81C;
+  color: #fff;
+  font-weight: 600;
+}
+
+.nav-link:nth-of-type(2) {
+  background-color: #4DB6AC;
+  color: #fff;
+  font-weight: 600;
+}
+
+.nav-link:nth-of-type(3) {
+  background-color: #FF8A65;
+  color: #fff;
+  font-weight: 600;
+}
+
+.nav-link:nth-of-type(4) {
+  background-color: #AED581;
+  color: #fff;
+  font-weight: 600;
+}
+
+.nav-link:nth-of-type(5) {
+  background-color: #BA68C8;
+  color: #fff;
+  font-weight: 600;
+}
+
+.nav-link:nth-of-type(6) {
+  background-color: #90CAF9;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Matn uchun span – u link fonining ustida bo‘ladi */
+.link-text {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+}
+
+/* Orqa fon qog‘irchoq rasmi */
+.nav-link::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 120px;
+  height: 120px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  z-index: 1;
+  /* fon rasm link fonining ustida, lekin matn ortida */
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  color: #fff;
+}
+
+/* Hoverda rasm paydo bo‘lib, kattalashadi */
+.nav-link:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  color: #fff;
+}
+
+/* Har bir tugma uchun qog‘irchoq-ikonka */
+.nav-link[data-img="bear"]::before {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/616/616408.png');
+}
+
+.nav-link[data-img="book"]::before {
+  background-image: url('https://sagomini.com/workspace/uploads/entities/card-generic/whale-1585268617.svg');
+}
+
+.nav-link[data-img="doctor"]::before {
+  background-image: url('	https://cdn-icons-png.flaticon.com/512/3209/3209094.png');
+}
+
+.nav-link[data-img="toy"]::before {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/2921/2921222.png');
+}
+
+.nav-link[data-img="group"]::before {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/1946/1946433.png');
+}
+
+.nav-link[data-img="phone"]::before {
+  background-image: url('	https://cdn-icons-png.flaticon.com/512/480/480456.png');
+}
+
+.kids-nav a {
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+/* gallery */
+
+#header {
+  margin:0;
+  padding:0;
+  overflow:hidden;
+
+  }
+#header{
+  height:100%;
+  width:100%;
+  }
+  .leaf{
+      position:absolute ;
+      width:100%;
+      height:100%;
+      top:0;
+      left:0;
+  }
+  .leaf div{
+  position:absolute ;
+  display:block ;
+  }
+  .leaf div:nth-child(1){
+      left:20%; 
+      animation:fall 15s linear infinite ;
+      animation-delay:-2s;
+  
+  }
+  .leaf div:nth-child(2){
+      left:70%; 
+      animation:fall 15s linear infinite ;
+      animation-delay:-4s;
+  }
+  .leaf div:nth-child(3){
+      left:10%; 
+      animation:fall 20s linear infinite ;
+      animation-delay:-7s;
+      
+  }
+  .leaf div:nth-child(4){
+      left:50%; 
+     animation:fall 18s linear infinite ; 
+     animation-delay:-5s;
+  }
+  .leaf div:nth-child(5){
+      left:85%; 
+      animation:fall 14s linear infinite ;
+      animation-delay:-5s;
+  }
+  .leaf div:nth-child(6){
+      left:15%; 
+      animation:fall 16s linear infinite ;
+      animation-delay:-10s;
+  }
+  .leaf div:nth-child(7){
+      left:90%; 
+      animation:fall 15s linear infinite ;
+      animation-delay:-4s;
+  }
+  
+  @keyframes fall{
+      0%{
+          opacity:1;
+          top:-10%;
+          transform:translateX (20px) rotate(0deg);
+      }
+      20%{
+          opacity:0.8;
+          transform:translateX (-20px) rotate(45deg);
+      }
+      40%{
+  
+          transform:translateX (-20px) rotate(90deg);
+      }
+      60%{
+          
+         transform:translateX (-20px) rotate(135deg); 
+      }
+      80%{
+      
+          transform:translateX (-20px) rotate(180deg);
+      }
+      100%{
+          
+          top:110%;
+          transform:translateX (-20px) rotate(225deg);
+      }
+      }
+  .leaf1{
+      transform: rotateX(180deg);
+  }
+  h2{
+      position:absolute ;
+      top:40%;
+      width:100%;
+      font-family: 'Courgette', cursive;
+      font-size:4em;
+      text-align:center;
+      transform:translate ;
+      color:#fff;
+      transform:translateY (-50%);
+  }
